@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RAM CO — Trading & Export Company</title>
+<html lang="en" dir="ltr"><head><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAM CO — Trading &amp; Export Company</title>
 
     <!-- ===== Google Fonts ===== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
 
     <!-- ===== Font Awesome 6 (Free) ===== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         /* ============================================================
@@ -1500,17 +1500,202 @@
             }
         }
     </style>
-</head>
+<style id="pet-style-tag">
+    .petControlPanel {
+        background-color: #F4F4F4;
+        position: absolute;
+        border-radius: 30px;
+        z-index: 2147483699;
+        width: 230px;
+        flex-direction: row;
+        padding: 15px;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .petControlBtn {
+        background-color: #FF6499;
+        width: 45%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 2.5%;
+    }
+
+    .petControlToggleBG {
+        background-color: #D9D9D9;
+        width: 100%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 2.5%;
+        flex-direction: row;
+        display: flex;
+    }
+
+    .petControlToggleSelected {
+        background-color: #FF6499;
+        width: 50%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+    }
+
+    .petControlToggleUnselected {
+        background-color: #D9D9D9;
+        width: 50%;
+        height: 36px;
+        border-radius: 36px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666666;
+        line-height: 36px;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+    }
+
+    .petDismissBtn {
+        width: 100%;
+        height: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #666666;
+        text-align: center;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 15px 0px;
+    }
+
+    .hideControlBtn {
+        width: 100%;
+        height: 12px;
+        font-size: 12px;
+        color: #666666;
+        text-align: right;
+        font-family: Tahoma;
+        cursor: pointer;
+        margin: 0 2.5%;
+        margin-bottom: 2.5%;
+    }
+
+    .petControlBtn:hover {
+        background-color: #eb3472;
+    }
+
+    .handCursor {
+        cursor: url("https://storage.googleapis.com/office-pets/petHand.png"), auto;
+    }
+
+    .handCursor:active {
+        cursor: url("https://storage.googleapis.com/office-pets/petHandBig.png"), auto;
+    }
+
+    .poopDiv {
+        cursor: url("https://storage.googleapis.com/office-pets/wasteBag.png") 30 15, auto;
+    }
+
+    .petViewportDismiss {
+        position: fixed !important;
+        top: 8px !important;
+        left: 8px !important;
+        margin: 0 !important;
+        z-index: 2147483700 !important;
+        padding: 6px 12px 6px 8px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: Tahoma, sans-serif;
+        color: #333;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 8px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        display: none;
+        line-height: 1;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        flex-direction: row;
+    }
+
+    .petViewportDismiss:hover {
+        background: #fff;
+        color: #000;
+    }
+
+    .petViewportDismissHead {
+        width: 22px !important;
+        height: 22px !important;
+        max-width: 22px !important;
+        max-height: 22px !important;
+        min-width: 22px !important;
+        min-height: 22px !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        flex-shrink: 0 !important;
+        flex-grow: 0 !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        border-radius: 4px;
+        align-self: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        vertical-align: middle !important;
+    }
+
+    .petViewportDismissLabel {
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+    }
+
+    .petEatingFood {
+        position: absolute !important;
+        left: 50% !important;
+        top: 152px !important;
+        width: 96px !important;
+        height: 96px !important;
+        margin-left: -98px !important;
+        box-sizing: border-box !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center bottom !important;
+        pointer-events: none !important;
+        z-index: 3000000000 !important;
+        transform: none !important;
+        display: none;
+    }
+    </style></head>
 <body>
 
     <!-- ============================================================
     HEADER
     ============================================================ -->
-    <header class="header" id="header" role="banner">
+    <header class="header scrolled" id="header" role="banner">
         <div class="container header-inner">
             <!-- Logo -->
             <a href="#" class="logo-wrap" aria-label="RAM CO Home">
-                <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo" />
+                <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo">
                 <span class="logo-text">RAM <span>CO</span></span>
             </a>
 
@@ -1570,15 +1755,13 @@
         </div>
 
         <div class="hero-content">
-            <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo" class="hero-logo" />
+            <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo" class="hero-logo">
 
             <h1 class="hero-title">RAM <span>CO</span></h1>
             <div class="hero-subtitle" data-i18n="hero.subtitle">Trading &amp; Export Company</div>
 
             <h2 class="hero-headline" data-i18n="hero.headline">Connecting Iranian Quality to Global Markets</h2>
-            <p class="hero-desc" data-i18n="hero.desc">
-                RAM CO is an international trading company connecting trusted Iranian manufacturers with buyers worldwide.
-            </p>
+            <p class="hero-desc" data-i18n="hero.desc">RAM CO is an international trading company connecting trusted Iranian manufacturers with buyers worldwide.</p>
 
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary" data-i18n="hero.btnQuote">Request a Quote</a>
@@ -1592,16 +1775,12 @@
     ============================================================ -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-grid">
+            <div class="about-grid" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                 <div class="about-text">
                     <span class="gold-line"></span>
-                    <h2 class="section-title" style="text-align:left;" data-i18n="about.title">About <span>RAM CO</span></h2>
-                    <p data-i18n="about.p1">
-                        RAM CO is a premier international trading company based in Iran, dedicated to connecting the finest Iranian manufacturers with global buyers. With deep roots in the region's rich agricultural and industrial heritage, we bring quality and reliability to every transaction.
-                    </p>
-                    <p data-i18n="about.p2">
-                        Our mission is to build long-term partnerships based on trust, transparency, and mutual growth. We believe in the power of authentic relationships and the value of delivering excellence at every step of the supply chain.
-                    </p>
+                    <h2 class="section-title" style="text-align:left;" data-i18n="about.title">About RAM CO</h2>
+                    <p data-i18n="about.p1">RAM CO is a premier international trading company based in Iran, dedicated to connecting the finest Iranian manufacturers with global buyers. With deep roots in the region's rich agricultural and industrial heritage, we bring quality and reliability to every transaction.</p>
+                    <p data-i18n="about.p2">Our mission is to build long-term partnerships based on trust, transparency, and mutual growth. We believe in the power of authentic relationships and the value of delivering excellence at every step of the supply chain.</p>
 
                     <ul class="about-values">
                         <li><i class="fas fa-check-circle"></i> <span data-i18n="about.v1">Mission-Driven</span></li>
@@ -1630,37 +1809,37 @@
         <div class="container">
             <div class="section-header">
                 <span class="gold-line"></span>
-                <h2 class="section-title" data-i18n="why.title">Why Choose <span>RAM CO</span></h2>
+                <h2 class="section-title" data-i18n="why.title">Why Choose RAM CO</h2>
                 <p class="section-subtitle" data-i18n="why.subtitle">We combine local expertise with global standards to deliver unmatched value to our partners.</p>
             </div>
 
             <div class="why-grid">
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-handshake"></i></div>
                     <h4 data-i18n="why.c1.title">Trusted Suppliers</h4>
                     <p data-i18n="why.c1.desc">We work only with vetted, reliable manufacturers who share our commitment to quality.</p>
                 </div>
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-star"></i></div>
                     <h4 data-i18n="why.c2.title">Premium Quality</h4>
                     <p data-i18n="why.c2.desc">Every product is carefully selected and inspected to meet the highest international standards.</p>
                 </div>
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-tags"></i></div>
                     <h4 data-i18n="why.c3.title">Competitive Pricing</h4>
                     <p data-i18n="why.c3.desc">Direct partnerships allow us to offer exceptional value without compromising quality.</p>
                 </div>
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-bolt"></i></div>
                     <h4 data-i18n="why.c4.title">Fast Response</h4>
                     <p data-i18n="why.c4.desc">Our team is agile and responsive, ensuring your inquiries are handled promptly.</p>
                 </div>
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-ship"></i></div>
                     <h4 data-i18n="why.c5.title">Worldwide Shipping</h4>
                     <p data-i18n="why.c5.desc">We manage logistics from origin to destination, delivering to markets across the globe.</p>
                 </div>
-                <div class="why-card">
+                <div class="why-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon-wrap"><i class="fas fa-people-arrows"></i></div>
                     <h4 data-i18n="why.c6.title">Long-Term Partnership</h4>
                     <p data-i18n="why.c6.desc">We invest in relationships, growing alongside our clients and suppliers for mutual success.</p>
@@ -1676,11 +1855,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="gold-line"></span>
-                <h2 class="section-title" data-i18n="products.title">Featured <span>Product</span></h2>
+                <h2 class="section-title" data-i18n="products.title">Featured Product</h2>
                 <p class="section-subtitle" data-i18n="products.subtitle">A taste of the quality we bring to the world.</p>
             </div>
 
-            <div class="featured-wrap">
+            <div class="featured-wrap" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                 <div class="featured-image">
                     <div class="product-placeholder">
                         <i class="fas fa-apple-alt"></i>
@@ -1704,9 +1883,7 @@
                         <span data-i18n="products.tag2">Premium Quality</span>
                     </div>
 
-                    <p style="color:#555;line-height:1.8;margin-bottom:16px;" data-i18n="products.desc">
-                        Grown in the lush orchards of Mazandaran, our kiwis are hand-picked at peak ripeness, packed with care, and shipped to preserve their natural sweetness and vibrant green color.
-                    </p>
+                    <p style="color:#555;line-height:1.8;margin-bottom:16px;" data-i18n="products.desc">Grown in the lush orchards of Mazandaran, our kiwis are hand-picked at peak ripeness, packed with care, and shipped to preserve their natural sweetness and vibrant green color.</p>
 
                     <a href="#contact" class="btn btn-primary" data-i18n="products.cta">Request a Quote</a>
                 </div>
@@ -1721,37 +1898,37 @@
         <div class="container">
             <div class="section-header">
                 <span class="gold-line"></span>
-                <h2 class="section-title" data-i18n="services.title">Our <span>Services</span></h2>
+                <h2 class="section-title" data-i18n="services.title">Our Services</h2>
                 <p class="section-subtitle" data-i18n="services.subtitle">End-to-end solutions for international trade, tailored to your needs.</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-search"></i></div>
                     <h4 data-i18n="services.s1.title">Product Sourcing</h4>
                     <p data-i18n="services.s1.desc">We find the right products from trusted Iranian suppliers that match your specifications.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-file-signature"></i></div>
                     <h4 data-i18n="services.s2.title">Export Management</h4>
                     <p data-i18n="services.s2.desc">Full-cycle export handling, from documentation to delivery, ensuring smooth transactions.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-shield-alt"></i></div>
                     <h4 data-i18n="services.s3.title">Supplier Verification</h4>
                     <p data-i18n="services.s3.desc">We rigorously vet manufacturers to guarantee reliability, quality, and ethical practices.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-globe"></i></div>
                     <h4 data-i18n="services.s4.title">International Trade</h4>
                     <p data-i18n="services.s4.desc">Expert guidance on cross-border trade, compliance, and market entry strategies.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-truck"></i></div>
                     <h4 data-i18n="services.s5.title">Logistics Coordination</h4>
                     <p data-i18n="services.s5.desc">End-to-end logistics management, from warehousing to final-mile delivery worldwide.</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <div class="icon"><i class="fas fa-file-alt"></i></div>
                     <h4 data-i18n="services.s6.title">Documentation Support</h4>
                     <p data-i18n="services.s6.desc">We handle all paperwork, including customs, certificates, and trade compliance documents.</p>
@@ -1767,32 +1944,32 @@
         <div class="container">
             <div class="section-header">
                 <span class="gold-line"></span>
-                <h2 class="section-title" data-i18n="markets.title">Target <span>Markets</span></h2>
+                <h2 class="section-title" data-i18n="markets.title">Target Markets</h2>
                 <p class="section-subtitle" data-i18n="markets.subtitle">We connect Iranian excellence with buyers across the Middle East and beyond.</p>
             </div>
 
             <div class="markets-grid">
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇮🇶</span>
                     <span class="country" data-i18n="markets.iq">Iraq</span>
                 </div>
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇴🇲</span>
                     <span class="country" data-i18n="markets.om">Oman</span>
                 </div>
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇦🇪</span>
                     <span class="country" data-i18n="markets.ae">UAE</span>
                 </div>
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇶🇦</span>
                     <span class="country" data-i18n="markets.qa">Qatar</span>
                 </div>
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇰🇼</span>
                     <span class="country" data-i18n="markets.kw">Kuwait</span>
                 </div>
-                <div class="market-card">
+                <div class="market-card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <span class="flag">🇹🇷</span>
                     <span class="country" data-i18n="markets.tr">Türkiye</span>
                 </div>
@@ -1806,24 +1983,24 @@
     <section class="stats" id="stats">
         <div class="container">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <i class="fas fa-handshake"></i>
-                    <div class="number" data-count="50">0</div>
+                    <div class="number" data-count="50">50</div>
                     <div class="label" data-i18n="stats.suppliers">Trusted Suppliers</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <i class="fas fa-ship"></i>
-                    <div class="number" data-count="100">0</div>
+                    <div class="number" data-count="100">100</div>
                     <div class="label" data-i18n="stats.shipments">Successful Shipments</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <i class="fas fa-boxes"></i>
-                    <div class="number" data-count="10">0</div>
+                    <div class="number" data-count="10">10</div>
                     <div class="label" data-i18n="stats.products">Export Products</div>
                 </div>
-                <div class="stat-item">
+                <div class="stat-item" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                     <i class="fas fa-headset"></i>
-                    <div class="number" data-count="247">0</div>
+                    <div class="number" data-count="247">247</div>
                     <div class="label" data-i18n="stats.support">Customer Support</div>
                 </div>
             </div>
@@ -1837,11 +2014,11 @@
         <div class="container">
             <div class="section-header">
                 <span class="gold-line"></span>
-                <h2 class="section-title" data-i18n="contact.title">Get In <span>Touch</span></h2>
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
                 <p class="section-subtitle" data-i18n="contact.subtitle">Let's start a conversation. We're here to answer your questions and explore opportunities.</p>
             </div>
 
-            <div class="contact-grid">
+            <div class="contact-grid" style="opacity: 1; transform: translateY(0px); transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
                 <!-- Contact Info -->
                 <div class="contact-info">
                     <h3 data-i18n="contact.infoTitle">Reach Us</h3>
@@ -1853,11 +2030,11 @@
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone-alt"></i>
-                        <a href="tel:+989123456789">+98 912 345 6789</a>
+                        <a href="tel:+989112906500">+989112906500</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
-                        <a href="https://wa.me/989123456789" target="_blank">+98 912 345 6789</a>
+                        <a href="https://wa.me/989300545003" target="_blank">+989300545003</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-instagram"></i>
@@ -1874,8 +2051,8 @@
                     <div class="contact-item" style="align-items:flex-start;">
                         <i class="fas fa-map-marker-alt" style="margin-top:4px;"></i>
                         <span>
-                            <span data-i18n="contact.address1">Tonkabon</span><br />
-                            <span data-i18n="contact.address2">Mazandaran</span><br />
+                            <span data-i18n="contact.address1">Tonkabon</span><br>
+                            <span data-i18n="contact.address2">Mazandaran</span><br>
                             <span data-i18n="contact.address3">Iran</span>
                         </span>
                     </div>
@@ -1896,38 +2073,36 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrap">
                     <h3 data-i18n="contact.formTitle">Send a Message</h3>
-                    <form id="contactForm" novalidate>
+                    <form id="contactForm" novalidate="">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="formName" data-i18n="contact.formName">Full Name</label>
-                                <input type="text" id="formName" placeholder="John Doe" required />
+                                <input type="text" id="formName" placeholder="John Doe" required="">
                             </div>
                             <div class="form-group">
                                 <label for="formCompany" data-i18n="contact.formCompany">Company</label>
-                                <input type="text" id="formCompany" placeholder="Your Company" />
+                                <input type="text" id="formCompany" placeholder="Your Company">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="formCountry" data-i18n="contact.formCountry">Country</label>
-                                <input type="text" id="formCountry" placeholder="Iran" />
+                                <input type="text" id="formCountry" placeholder="Iran">
                             </div>
                             <div class="form-group">
                                 <label for="formEmail" data-i18n="contact.formEmail">Email</label>
-                                <input type="email" id="formEmail" placeholder="you@example.com" required />
+                                <input type="email" id="formEmail" placeholder="you@example.com" required="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="formPhone" data-i18n="contact.formPhone">Phone</label>
-                            <input type="tel" id="formPhone" placeholder="+98 912 345 6789" />
+                            <input type="tel" id="formPhone" placeholder="+98 912 345 6789">
                         </div>
                         <div class="form-group">
                             <label for="formMessage" data-i18n="contact.formMessage">Message</label>
-                            <textarea id="formMessage" placeholder="Tell us about your requirements…" required></textarea>
+                            <textarea id="formMessage" placeholder="Tell us about your requirements…" required=""></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="contact.formSubmit">
-                            <i class="fas fa-paper-plane"></i> Request a Quote
-                        </button>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;" data-i18n="contact.formSubmit">Request a Quote</button>
                     </form>
                 </div>
             </div>
@@ -1942,7 +2117,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo-wrap" style="justify-content:flex-start;">
-                        <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo" style="height:36px;" />
+                        <img src="https://raw.githubusercontent.com/ramtinhossinbiki-afk/RAM-CO/refs/heads/main/Untitld-removebg-preview.png" alt="RAM CO Logo" style="height:36px;">
                         <span class="logo-text">RAM <span>CO</span></span>
                     </div>
                     <p data-i18n="footer.tagline">Trading &amp; Export Company — Connecting Iranian quality to the world.</p>
@@ -1970,7 +2145,7 @@
             </div>
 
             <div class="footer-bottom">
-                &copy; <span id="footerYear">2026</span> <span>RAM CO</span>. <span data-i18n="footer.rights">All rights reserved.</span>
+                © <span id="footerYear">2026</span> <span>RAM CO</span>. <span data-i18n="footer.rights">All rights reserved.</span>
             </div>
         </div>
     </footer>
@@ -1978,7 +2153,7 @@
     <!-- ============================================================
     BACK TO TOP
     ============================================================ -->
-    <button class="back-top" id="backTop" aria-label="Back to top">
+    <button class="back-top visible" id="backTop" aria-label="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
@@ -2728,5 +2903,6 @@
         })();
     </script>
 
-</body>
-</html>
+
+
+<div id="happyDogOverlayBg" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: none; justify-content: center; align-items: center; z-index: 999999; backdrop-filter: blur(2px);"><div id="happyDogOverlayBox" style="background: white; padding: 24px 32px; border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 24px; font-size: 18px; max-width: 400px; text-align: center; color: rgb(51, 51, 51); font-family: sans-serif; transition: transform 0.3s, opacity 0.3s; transform: scale(0.95); opacity: 0;"></div></div></body><div style="position: absolute; left: 200px; top: 5301px; display: none; z-index: 2147483647; opacity: 1;"><div class="handCursor" style="height: 240px; width: 200px; background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/shadow_gray.png&quot;); background-size: 100% 100%; position: absolute; left: 0px; top: 0px; display: none; transform: scale(0.8);"><div style="display: block; position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; z-index: 2147483647; background-size: contain !important; background-repeat: no-repeat !important; background-position: center center !important;"></div><div style="position: absolute; top: 85px; left: 34px; height: 120px; width: 120px; background-size: 120px 120px; z-index: 2147483647; display: block;"></div><div style="position: absolute; top: 100px; left: 15px; height: 120px; width: 120px; background-size: 120px 120px; z-index: 2147483647; display: block;"></div><div class="petEatingFood" aria-hidden="true" style="background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/food-default.png&quot;);"></div><div style="height: 160px; width: 160px; position: absolute; top: 17px; left: -10px; background-size: 100% 100%; background-repeat: no-repeat; z-index: 2147483647; transform: translateX(0px) translateY(44px) rotate(30deg);"><div style="position: absolute; top: -16px; left: 20px; height: 120px; width: 120px; background-size: 120px 120px; background-repeat: no-repeat; z-index: 1; transform: rotate(15deg); display: block;"></div><div style="position: absolute; top: 16px; left: 20px; height: 120px; width: 120px; background-size: 120px 120px; background-repeat: no-repeat; z-index: 2; transform: rotate(15deg); display: block;"></div></div></div></div><div style="left: 200px; top: 5407.6px; display: none; position: absolute; height: 30px; width: 30px; border-radius: 15px; background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/ball.png&quot;); background-size: 30px 30px; z-index: 20000000; transform: scale(1); transform-origin: center center;"></div><div class="poopDiv" style="left: 450px; top: 5487.6px; display: none; position: absolute; height: 60px; width: 60px; background-image: url(&quot;chrome-extension://cdoblkdcnbcdlcfklmbmkapbekgfbijp/images/poop.png&quot;); background-size: 60px 60px; z-index: 2147483647; transform: scale(1); transform-origin: center center;"></div><div style="left: 410px; top: 5567.6px; width: 150px; text-align: center; display: none; position: absolute; z-index: 2147483647; font-weight: bold; color: rgb(177, 65, 255); font-size: 24px; padding: 4px 8px; border-radius: 10px; pointer-events: none; font-family: Tahoma; text-shadow: white -1px -1px 0px, white 1px -1px 0px, white -1px 1px 0px, white 1px 1px 0px, rgba(0, 0, 0, 0.5) 0px 0px 14px; transform: scale(1); transform-origin: left top;">Click to clean up after your pet</div><div class="petControlPanel" style="display: none; transform: scale(1); transform-origin: left top; top: 5337.6px;"><div class="hideControlBtn">Hide</div><div class="petControlBtn">Feed</div><div class="petControlBtn">Treat</div><div class="petControlBtn">Pet</div><div class="petControlBtn">Toy</div><div class="petControlToggleBG"><div class="petControlToggleSelected">Follow</div><div class="petControlToggleUnselected">Stay</div></div><div class="petControlToggleBG"><div class="petControlToggleSelected" style="width: 33.3333%;">L</div><div class="petControlToggleUnselected" style="width: 33.3333%;">M</div><div class="petControlToggleUnselected" style="width: 33.3333%;">S</div></div><div class="petDismissBtn">Go back home</div></div><div style="left: 0px; top: 0px; display: none; position: absolute; z-index: 2147483647; color: rgb(177, 65, 255); font-size: 24px; font-weight: bold; padding: 4px 8px; border-radius: 10px; pointer-events: none; font-family: Tahoma; text-shadow: white -1px -1px 0px, white 1px -1px 0px, white -1px 1px 0px, white 1px 1px 0px, rgba(0, 0, 0, 0.5) 0px 0px 14px;"></div><button type="button" class="petViewportDismiss" aria-label="Dismiss pet" style="display: none;"><img class="petViewportDismissHead" alt="" aria-hidden="true" style="width: 22px !important; height: 22px !important; max-width: 22px !important; max-height: 22px !important; min-width: 22px !important; min-height: 22px !important; object-fit: contain !important; flex-shrink: 0 !important; box-sizing: border-box !important;"><span class="petViewportDismissLabel">Dismiss</span></button></html>
